@@ -5,6 +5,8 @@
  */
 package glucolisis;
 
+import java.awt.Color;
+
 /**
  *
  * @author 18PROGB0115
@@ -16,6 +18,7 @@ public class Informacion extends javax.swing.JFrame {
      */
     public Informacion() {
         initComponents();
+         this.getContentPane().setBackground(Color.LIGHT_GRAY);
     }
 
     /**
@@ -28,71 +31,112 @@ public class Informacion extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        txtInformacion = new javax.swing.JTextArea();
+        btnAyuda = new javax.swing.JButton();
+        btnIntroduccion = new javax.swing.JButton();
+        btnGlucolisis = new javax.swing.JButton();
+        btnFunciones = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        btnFases = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Contenido ");
+        setName("FrmInformacion"); // NOI18N
         setPreferredSize(new java.awt.Dimension(500, 400));
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
-        jTextArea1.setRows(5);
-        jTextArea1.setText("          Información");
-        jScrollPane1.setViewportView(jTextArea1);
+        txtInformacion.setEditable(false);
+        txtInformacion.setBackground(new java.awt.Color(0, 153, 255));
+        txtInformacion.setColumns(20);
+        txtInformacion.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
+        txtInformacion.setRows(5);
+        txtInformacion.setText("          Información");
+        jScrollPane1.setViewportView(txtInformacion);
 
-        jButton1.setText("?");
+        btnAyuda.setText("?");
 
-        jButton2.setText("1\n");
+        btnIntroduccion.setBackground(new java.awt.Color(0, 255, 255));
+        btnIntroduccion.setText("Introducción");
+        btnIntroduccion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIntroduccionActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("2\n");
+        btnGlucolisis.setBackground(new java.awt.Color(0, 204, 204));
+        btnGlucolisis.setText("Glucólisis:Un proceso metabólico");
+        btnGlucolisis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGlucolisisActionPerformed(evt);
+            }
+        });
 
-        jButton4.setText("3\n");
+        btnFunciones.setBackground(new java.awt.Color(0, 153, 153));
+        btnFunciones.setText("Funciones");
+        btnFunciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFuncionesActionPerformed(evt);
+            }
+        });
 
         jButton6.setText("Menu Principal ");
+
+        btnFases.setBackground(new java.awt.Color(0, 102, 102));
+        btnFases.setText("Fases");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 361, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1)
+                    .addComponent(btnAyuda)
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnIntroduccion, javax.swing.GroupLayout.DEFAULT_SIZE, 361, Short.MAX_VALUE)
+                    .addComponent(btnGlucolisis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnFunciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnFases, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnAyuda, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(41, 41, 41)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(45, 45, 45)
-                .addComponent(jButton2)
+                .addComponent(btnIntroduccion)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
+                .addComponent(btnGlucolisis)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                .addComponent(btnFunciones)
+                .addGap(18, 18, 18)
+                .addComponent(btnFases)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addComponent(jButton6))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnIntroduccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIntroduccionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnIntroduccionActionPerformed
+
+    private void btnGlucolisisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGlucolisisActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnGlucolisisActionPerformed
+
+    private void btnFuncionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFuncionesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnFuncionesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -131,12 +175,13 @@ public class Informacion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton btnAyuda;
+    private javax.swing.JButton btnFases;
+    private javax.swing.JButton btnFunciones;
+    private javax.swing.JButton btnGlucolisis;
+    private javax.swing.JButton btnIntroduccion;
     private javax.swing.JButton jButton6;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea txtInformacion;
     // End of variables declaration//GEN-END:variables
 }

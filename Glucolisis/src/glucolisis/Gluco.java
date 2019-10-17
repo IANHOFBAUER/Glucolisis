@@ -5,6 +5,8 @@
  */
 package glucolisis;
 
+import java.awt.Color;
+
 /**
  *
  * @author 18PROGB0115
@@ -16,6 +18,7 @@ public class Gluco extends javax.swing.JFrame {
      */
     public Gluco() {
         initComponents();
+         this.getContentPane().setBackground(Color.LIGHT_GRAY);
     }
 
     /**
@@ -28,82 +31,86 @@ public class Gluco extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        txtTitulo = new javax.swing.JTextArea();
+        btnInformacion = new javax.swing.JButton();
+        btnQuizzes = new javax.swing.JButton();
+        btnImagenes = new javax.swing.JButton();
+        btnAyuda = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Menu principal");
         setBackground(new java.awt.Color(204, 204, 204));
+        setName("FrmGluco"); // NOI18N
         setPreferredSize(new java.awt.Dimension(500, 400));
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setBackground(new java.awt.Color(153, 255, 153));
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
-        jTextArea1.setRows(5);
-        jTextArea1.setText("           Glucolisis");
-        jScrollPane1.setViewportView(jTextArea1);
+        txtTitulo.setEditable(false);
+        txtTitulo.setBackground(new java.awt.Color(0, 153, 255));
+        txtTitulo.setColumns(20);
+        txtTitulo.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
+        txtTitulo.setRows(5);
+        txtTitulo.setText("           Glucolisis");
+        jScrollPane1.setViewportView(txtTitulo);
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Informacion");
+        btnInformacion.setBackground(new java.awt.Color(0, 102, 102));
+        btnInformacion.setText("Informacion");
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Quizzes");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnQuizzes.setBackground(new java.awt.Color(0, 102, 102));
+        btnQuizzes.setText("Quizzes");
+        btnQuizzes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnQuizzesActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Imagenes");
+        btnImagenes.setBackground(new java.awt.Color(0, 102, 102));
+        btnImagenes.setText("Imagenes");
+        btnImagenes.setName("BtnImagenes"); // NOI18N
 
-        jButton5.setBackground(new java.awt.Color(204, 204, 204));
-        jButton5.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        jButton5.setText("?");
+        btnAyuda.setBackground(new java.awt.Color(204, 204, 204));
+        btnAyuda.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        btnAyuda.setText("?");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(btnInformacion, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnQuizzes, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addComponent(btnImagenes, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(37, Short.MAX_VALUE))
             .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnAyuda, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jButton5)
+                .addComponent(btnAyuda)
                 .addGap(57, 57, 57)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(127, 127, 127))
+                    .addComponent(btnImagenes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnInformacion, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnQuizzes, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(57, 57, 57))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnQuizzesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuizzesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnQuizzesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -141,11 +148,11 @@ public class Gluco extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton btnAyuda;
+    private javax.swing.JButton btnImagenes;
+    private javax.swing.JButton btnInformacion;
+    private javax.swing.JButton btnQuizzes;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea txtTitulo;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,6 +5,8 @@
  */
 package glucolisis;
 
+import java.awt.Color;
+
 /**
  *
  * @author 18PROGB0115
@@ -16,6 +18,7 @@ public class Imagenes extends javax.swing.JFrame {
      */
     public Imagenes() {
         initComponents();
+         this.getContentPane().setBackground(Color.LIGHT_GRAY);
     }
 
     /**
@@ -28,8 +31,8 @@ public class Imagenes extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
+        txtTitulo = new javax.swing.JTextArea();
+        btnAyuda = new javax.swing.JButton();
         panel1 = new java.awt.Panel();
         panel2 = new java.awt.Panel();
         panel3 = new java.awt.Panel();
@@ -38,26 +41,29 @@ public class Imagenes extends javax.swing.JFrame {
         panel6 = new java.awt.Panel();
         panel7 = new java.awt.Panel();
         panel8 = new java.awt.Panel();
-        jButton2 = new javax.swing.JButton();
+        btnMenuprincipal = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setName("FrmImagenes"); // NOI18N
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
-        jTextArea1.setRows(5);
-        jTextArea1.setText("            Imágenes");
-        jScrollPane1.setViewportView(jTextArea1);
+        txtTitulo.setEditable(false);
+        txtTitulo.setBackground(new java.awt.Color(0, 153, 255));
+        txtTitulo.setColumns(20);
+        txtTitulo.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
+        txtTitulo.setRows(5);
+        txtTitulo.setText("            Imágenes");
+        jScrollPane1.setViewportView(txtTitulo);
 
-        jButton1.setText("?");
+        btnAyuda.setText("?");
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
         panel1.setLayout(panel1Layout);
         panel1Layout.setHorizontalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         panel1Layout.setVerticalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -101,7 +107,7 @@ public class Imagenes extends javax.swing.JFrame {
         panel5.setLayout(panel5Layout);
         panel5Layout.setHorizontalGroup(
             panel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 90, Short.MAX_VALUE)
         );
         panel5Layout.setVerticalGroup(
             panel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,7 +147,7 @@ public class Imagenes extends javax.swing.JFrame {
             .addGap(0, 86, Short.MAX_VALUE)
         );
 
-        jButton2.setText("Menu Principal");
+        btnMenuprincipal.setText("Menu Principal");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -151,8 +157,8 @@ public class Imagenes extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(63, 63, 63)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(panel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -177,14 +183,14 @@ public class Imagenes extends javax.swing.JFrame {
                         .addGap(54, 54, 54))))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnAyuda)
+                    .addComponent(btnMenuprincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jButton1)
+                .addComponent(btnAyuda)
                 .addGap(57, 57, 57)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -210,7 +216,7 @@ public class Imagenes extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(panel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
-                .addComponent(jButton2))
+                .addComponent(btnMenuprincipal))
         );
 
         pack();
@@ -252,10 +258,9 @@ public class Imagenes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnAyuda;
+    private javax.swing.JButton btnMenuprincipal;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private java.awt.Panel panel1;
     private java.awt.Panel panel2;
     private java.awt.Panel panel3;
@@ -264,5 +269,6 @@ public class Imagenes extends javax.swing.JFrame {
     private java.awt.Panel panel6;
     private java.awt.Panel panel7;
     private java.awt.Panel panel8;
+    private javax.swing.JTextArea txtTitulo;
     // End of variables declaration//GEN-END:variables
 }
