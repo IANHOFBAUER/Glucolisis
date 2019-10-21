@@ -11,12 +11,12 @@ import java.awt.Color;
  *
  * @author 18PROGB0115
  */
-public class Intoduccion extends javax.swing.JFrame {
+public class Introduccion extends javax.swing.JFrame {
 
     /**
      * Creates new form Intoduccion
      */
-    public Intoduccion() {
+    public Introduccion() {
         initComponents();
          this.getContentPane().setBackground(Color.LIGHT_GRAY);
     }
@@ -62,9 +62,19 @@ public class Intoduccion extends javax.swing.JFrame {
 
         btnAtras.setBackground(new java.awt.Color(204, 204, 204));
         btnAtras.setText("Atras");
+        btnAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtrasActionPerformed(evt);
+            }
+        });
 
         btnAdelante.setBackground(new java.awt.Color(204, 204, 204));
         btnAdelante.setText("Adelante");
+        btnAdelante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdelanteActionPerformed(evt);
+            }
+        });
 
         btnAyuda.setText("?");
 
@@ -107,6 +117,16 @@ public class Intoduccion extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
+        Informacion at = new Informacion();
+        at.setVisible(true);
+    }//GEN-LAST:event_btnAtrasActionPerformed
+
+    private void btnAdelanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdelanteActionPerformed
+     Glucolisis del = new Glucolisis();
+        del.setVisible(true);
+    }//GEN-LAST:event_btnAdelanteActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -124,20 +144,21 @@ public class Intoduccion extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Intoduccion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Introduccion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Intoduccion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Introduccion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Intoduccion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Introduccion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Intoduccion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Introduccion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Intoduccion().setVisible(true);
+                new Introduccion().setVisible(true);
             }
         });
     }

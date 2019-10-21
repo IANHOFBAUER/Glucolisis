@@ -41,8 +41,8 @@ public class Informacion extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Contenido ");
+        setFocusTraversalPolicyProvider(true);
         setName("FrmInformacion"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(500, 400));
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
@@ -82,9 +82,19 @@ public class Informacion extends javax.swing.JFrame {
         });
 
         jButton6.setText("Menu Principal ");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         btnFases.setBackground(new java.awt.Color(0, 102, 102));
         btnFases.setText("Fases");
+        btnFases.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFasesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -94,7 +104,9 @@ public class Informacion extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAyuda)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(141, 141, 141)
+                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(59, 59, 59)
@@ -119,7 +131,7 @@ public class Informacion extends javax.swing.JFrame {
                 .addComponent(btnFunciones)
                 .addGap(18, 18, 18)
                 .addComponent(btnFases, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addComponent(jButton6))
         );
 
@@ -127,16 +139,29 @@ public class Informacion extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnIntroduccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIntroduccionActionPerformed
-        // TODO add your handling code here:
+        Introduccion intro = new Introduccion();
+        intro.setVisible(true);
     }//GEN-LAST:event_btnIntroduccionActionPerformed
 
     private void btnGlucolisisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGlucolisisActionPerformed
-        // TODO add your handling code here:
+         Glucolisis gluco = new Glucolisis();
+        gluco.setVisible(true);
     }//GEN-LAST:event_btnGlucolisisActionPerformed
 
     private void btnFuncionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFuncionesActionPerformed
-        // TODO add your handling code here:
+      Funciones Fun = new Funciones();
+        Fun.setVisible(true);
     }//GEN-LAST:event_btnFuncionesActionPerformed
+
+    private void btnFasesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFasesActionPerformed
+        Fases Etaps = new Fases();
+        Etaps.setVisible(true);
+    }//GEN-LAST:event_btnFasesActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+     Inicio Menp = new Inicio();
+        Menp.setVisible(true);
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments

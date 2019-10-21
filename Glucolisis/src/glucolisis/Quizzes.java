@@ -59,6 +59,11 @@ public class Quizzes extends javax.swing.JFrame {
         });
 
         btnMenuprincipal.setText("Manu Principal\n");
+        btnMenuprincipal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuprincipalActionPerformed(evt);
+            }
+        });
 
         btnAyuda.setText("?");
 
@@ -93,8 +98,14 @@ public class Quizzes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCuestionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCuestionarioActionPerformed
-        // TODO add your handling code here:
+          Cuestionario cu = new Cuestionario();
+        cu.setVisible(true);
     }//GEN-LAST:event_btnCuestionarioActionPerformed
+
+    private void btnMenuprincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuprincipalActionPerformed
+        Inicio i = new Inicio();
+        i.setVisible(true);
+    }//GEN-LAST:event_btnMenuprincipalActionPerformed
 
     /**
      * @param args the command line arguments

@@ -38,6 +38,7 @@ public class Glucolisis extends javax.swing.JFrame {
         btnAdelante = new javax.swing.JButton();
         btnMenuprincipal = new javax.swing.JButton();
         btnAyuda = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("FrmGlucolisis"); // NOI18N
@@ -59,7 +60,7 @@ public class Glucolisis extends javax.swing.JFrame {
         txtGlucolisis.setColumns(20);
         txtGlucolisis.setLineWrap(true);
         txtGlucolisis.setRows(5);
-        txtGlucolisis.setText("La glucólisis glicolisis es la vía metabólica \nencargada de oxidar la glucosa con la finalidad \nde obtener energía para la célula.Consist en \ndiez reacciones enzimáticas conscutivas que \nconvierten la glucosa en dos moléculas de piruvato,\nel cual es capaz de seguir otras vías metabólicas y así \ncontinuar entregando energía alorganismo.\n\nDurante la glucólisis se obtiene un rendimiento \nneto de dos moléculas de ATP y dos moléculas\nNADH; el ATP puede ser usado como fuente de \nenergía para realizar trabajo metabólico, \nmientras qu el NADH puede tener distintos destinos\n \nNADH; \n");
+        txtGlucolisis.setText("La glucólisis glicolisis es la vía metabólica encargada de oxidar la glucosa con la finalidad de obtener energía para la célula.Consist en diez reacciones enzimáticas conscutivas que convierten la glucosa en dos moléculas de piruvato, el cual es capaz de seguir otras vías metabólicas y así continuar entregando energía al organismo.\n\nDurante la glucólisis se obtiene un rendimiento \nneto de dos moléculas de ATP y dos moléculas\nNADH; el ATP puede ser usado como fuente de \nenergía para realizar trabajo metabólico, \nmientras qu el NADH puede tener distintos destinos\n \nNADH; \n");
         txtGlucolisis.setWrapStyleWord(true);
         jScrollPane2.setViewportView(txtGlucolisis);
 
@@ -72,35 +73,45 @@ public class Glucolisis extends javax.swing.JFrame {
         });
 
         btnAdelante.setText("Adelante\n");
+        btnAdelante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdelanteActionPerformed(evt);
+            }
+        });
 
         btnMenuprincipal.setText("Menu Principal\n");
+        btnMenuprincipal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuprincipalActionPerformed(evt);
+            }
+        });
 
         btnAyuda.setText("?");
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ejemplo glucolisis.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 498, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 654, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(btnAyuda)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
+                .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnAtras)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnAdelante))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnMenuprincipal)
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane2)))
+                    .addComponent(btnAtras)
+                    .addComponent(btnMenuprincipal))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(62, 62, 62)
+                .addComponent(btnAdelante)
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(89, 89, 89)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,23 +119,37 @@ public class Glucolisis extends javax.swing.JFrame {
                 .addComponent(btnAyuda)
                 .addGap(27, 27, 27)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(11, 11, 11)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnAdelante)
-                    .addComponent(btnAtras))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
-                .addComponent(btnMenuprincipal)
-                .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnAdelante)
+                            .addComponent(btnAtras))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnMenuprincipal))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE))
+                .addGap(24, 24, 24))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
-        // TODO add your handling code here:
+        Introduccion in = new Introduccion();
+        in.setVisible(true);
     }//GEN-LAST:event_btnAtrasActionPerformed
+
+    private void btnAdelanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdelanteActionPerformed
+        Funciones foo = new Funciones();
+        foo.setVisible(true);
+    }//GEN-LAST:event_btnAdelanteActionPerformed
+
+    private void btnMenuprincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuprincipalActionPerformed
+        Inicio ini = new Inicio();
+        ini.setVisible(true);
+    }//GEN-LAST:event_btnMenuprincipalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -166,6 +191,7 @@ public class Glucolisis extends javax.swing.JFrame {
     private javax.swing.JButton btnAtras;
     private javax.swing.JButton btnAyuda;
     private javax.swing.JButton btnMenuprincipal;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea txtGlucolisis;
