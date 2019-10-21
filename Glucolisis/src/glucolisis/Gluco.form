@@ -31,14 +31,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
               <Component id="btnInformacion" min="-2" pref="141" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
               <Component id="btnQuizzes" min="-2" pref="141" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="btnImagenes" min="-2" pref="138" max="-2" attributes="0"/>
-              <EmptySpace pref="37" max="32767" attributes="0"/>
+              <EmptySpace pref="85" max="32767" attributes="0"/>
           </Group>
           <Component id="jScrollPane1" alignment="1" pref="0" max="32767" attributes="0"/>
           <Group type="102" alignment="0" attributes="0">
@@ -54,12 +52,9 @@
               <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="71" max="-2" attributes="0"/>
               <EmptySpace pref="48" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="btnImagenes" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btnInformacion" alignment="3" min="-2" pref="142" max="-2" attributes="0"/>
-                      <Component id="btnQuizzes" alignment="3" min="-2" pref="142" max="-2" attributes="0"/>
-                  </Group>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnInformacion" alignment="3" min="-2" pref="142" max="-2" attributes="0"/>
+                  <Component id="btnQuizzes" alignment="3" min="-2" pref="142" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
           </Group>
@@ -112,15 +107,6 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnQuizzesActionPerformed"/>
       </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnImagenes">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="66" green="66" red="0" type="rgb"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Imagenes"/>
-        <Property name="name" type="java.lang.String" value="BtnImagenes" noResource="true"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnAyuda">
       <Properties>
