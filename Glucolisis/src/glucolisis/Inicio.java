@@ -30,28 +30,15 @@ public class Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtTitulo = new javax.swing.JTextArea();
         btnInformacion = new javax.swing.JButton();
         btnQuizzes = new javax.swing.JButton();
         btnAyuda = new javax.swing.JButton();
+        lblInicio = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu principal");
         setBackground(new java.awt.Color(204, 204, 204));
         setName("FrmGluco"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(500, 400));
-
-        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-
-        txtTitulo.setEditable(false);
-        txtTitulo.setBackground(new java.awt.Color(0, 153, 255));
-        txtTitulo.setColumns(20);
-        txtTitulo.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
-        txtTitulo.setRows(5);
-        txtTitulo.setText("           Glucolisis");
-        jScrollPane1.setViewportView(txtTitulo);
 
         btnInformacion.setBackground(new java.awt.Color(0, 102, 102));
         btnInformacion.setText("Informacion");
@@ -78,6 +65,10 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
 
+        lblInicio.setBackground(new java.awt.Color(0, 255, 255));
+        lblInicio.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lblInicio.setText("La Glucólisis");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -88,18 +79,21 @@ public class Inicio extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(51, 51, 51)
                 .addComponent(btnInformacion, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 170, Short.MAX_VALUE)
                 .addComponent(btnQuizzes, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(61, 61, 61))
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(151, 151, 151)
+                .addComponent(lblInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(btnAyuda)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addGap(26, 26, 26)
+                .addComponent(lblInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnInformacion, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnQuizzes, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -120,7 +114,9 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_btnInformacionActionPerformed
 
     private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
-     
+Ayuda i=new Ayuda();
+i.setVisible(true);
+dispose();
     }//GEN-LAST:event_btnAyudaActionPerformed
 
     /**
@@ -163,7 +159,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JButton btnAyuda;
     private javax.swing.JButton btnInformacion;
     private javax.swing.JButton btnQuizzes;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea txtTitulo;
+    private javax.swing.JLabel lblInicio;
     // End of variables declaration//GEN-END:variables
 }

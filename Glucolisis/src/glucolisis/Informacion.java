@@ -30,32 +30,25 @@ public class Informacion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtInformacion = new javax.swing.JTextArea();
         btnAyuda = new javax.swing.JButton();
         btnIntroduccion = new javax.swing.JButton();
         btnGlucolisis = new javax.swing.JButton();
         btnFunciones = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         btnFases = new javax.swing.JButton();
+        lblInformacion = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Contenido ");
         setFocusTraversalPolicyProvider(true);
         setName("FrmInformacion"); // NOI18N
 
-        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-
-        txtInformacion.setEditable(false);
-        txtInformacion.setBackground(new java.awt.Color(0, 153, 255));
-        txtInformacion.setColumns(20);
-        txtInformacion.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
-        txtInformacion.setRows(5);
-        txtInformacion.setText("          Información");
-        jScrollPane1.setViewportView(txtInformacion);
-
         btnAyuda.setText("?");
+        btnAyuda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAyudaActionPerformed(evt);
+            }
+        });
 
         btnIntroduccion.setBackground(new java.awt.Color(0, 255, 255));
         btnIntroduccion.setText("Introducción");
@@ -96,18 +89,21 @@ public class Informacion extends javax.swing.JFrame {
             }
         });
 
+        lblInformacion.setBackground(new java.awt.Color(0, 153, 153));
+        lblInformacion.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lblInformacion.setText("Información");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAyuda)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(141, 141, 141)
                         .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 190, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(59, 59, 59)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -116,14 +112,18 @@ public class Informacion extends javax.swing.JFrame {
                     .addComponent(btnFunciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnFases, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblInformacion, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(113, 113, 113))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(btnAyuda, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
+                .addGap(24, 24, 24)
+                .addComponent(lblInformacion, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53)
                 .addComponent(btnIntroduccion)
                 .addGap(18, 18, 18)
                 .addComponent(btnGlucolisis)
@@ -159,9 +159,14 @@ public class Informacion extends javax.swing.JFrame {
     }//GEN-LAST:event_btnFasesActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-     Inicio Menp = new Inicio();
-        Menp.setVisible(true);
+     dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
+        Ayuda i=new Ayuda();
+i.setVisible(true);
+dispose();
+    }//GEN-LAST:event_btnAyudaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -206,7 +211,6 @@ public class Informacion extends javax.swing.JFrame {
     private javax.swing.JButton btnGlucolisis;
     private javax.swing.JButton btnIntroduccion;
     private javax.swing.JButton jButton6;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea txtInformacion;
+    private javax.swing.JLabel lblInformacion;
     // End of variables declaration//GEN-END:variables
 }

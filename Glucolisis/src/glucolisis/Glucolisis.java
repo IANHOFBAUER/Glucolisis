@@ -30,8 +30,6 @@ public class Glucolisis extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtTitu = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtGlucolisis = new javax.swing.JTextArea();
         btnAtras = new javax.swing.JButton();
@@ -39,20 +37,10 @@ public class Glucolisis extends javax.swing.JFrame {
         btnMenuprincipal = new javax.swing.JButton();
         btnAyuda = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        lblGlucolisis = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("FrmGlucolisis"); // NOI18N
-
-        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-
-        txtTitu.setEditable(false);
-        txtTitu.setBackground(new java.awt.Color(0, 204, 204));
-        txtTitu.setColumns(20);
-        txtTitu.setFont(new java.awt.Font("Arial", 0, 30)); // NOI18N
-        txtTitu.setRows(5);
-        txtTitu.setText("  Glucólisis: Un proceso metabólico ");
-        jScrollPane1.setViewportView(txtTitu);
 
         jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
@@ -87,39 +75,51 @@ public class Glucolisis extends javax.swing.JFrame {
         });
 
         btnAyuda.setText("?");
+        btnAyuda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAyudaActionPerformed(evt);
+            }
+        });
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ejemplo glucolisis.png"))); // NOI18N
+
+        lblGlucolisis.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lblGlucolisis.setText("Glucólisis:Un proceso Energetico");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 654, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(btnAyuda)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnAtras)
-                    .addComponent(btnMenuprincipal))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(62, 62, 62)
-                .addComponent(btnAdelante)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnAtras)
+                            .addComponent(btnMenuprincipal))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(62, 62, 62)
+                        .addComponent(btnAdelante))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(89, 89, 89)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblGlucolisis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(89, 89, 89)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(btnAyuda)
-                .addGap(27, 27, 27)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblGlucolisis, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -137,19 +137,25 @@ public class Glucolisis extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
-        Introduccion in = new Introduccion();
-        in.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnAtrasActionPerformed
 
     private void btnAdelanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdelanteActionPerformed
         Funciones foo = new Funciones();
         foo.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnAdelanteActionPerformed
 
     private void btnMenuprincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuprincipalActionPerformed
         Inicio ini = new Inicio();
         ini.setVisible(true);
     }//GEN-LAST:event_btnMenuprincipalActionPerformed
+
+    private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
+      Ayuda i=new Ayuda();
+i.setVisible(true);
+dispose();
+    }//GEN-LAST:event_btnAyudaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -192,9 +198,8 @@ public class Glucolisis extends javax.swing.JFrame {
     private javax.swing.JButton btnAyuda;
     private javax.swing.JButton btnMenuprincipal;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lblGlucolisis;
     private javax.swing.JTextArea txtGlucolisis;
-    private javax.swing.JTextArea txtTitu;
     // End of variables declaration//GEN-END:variables
 }

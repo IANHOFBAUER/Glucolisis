@@ -27,8 +27,6 @@ public class Cuestionario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtTitulo = new javax.swing.JTextArea();
         btnAyuda = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtPreguno = new javax.swing.JTextArea();
@@ -55,20 +53,17 @@ public class Cuestionario extends javax.swing.JFrame {
         rbOpcapregcinco = new javax.swing.JRadioButton();
         rbOpccpregcinco = new javax.swing.JRadioButton();
         rbOpcbpregcinco = new javax.swing.JRadioButton();
+        lblCuestionario = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("FrmCuestionario"); // NOI18N
 
-        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-
-        txtTitulo.setColumns(20);
-        txtTitulo.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
-        txtTitulo.setRows(5);
-        txtTitulo.setText("                      Cuestionario");
-        jScrollPane1.setViewportView(txtTitulo);
-
         btnAyuda.setText("?");
+        btnAyuda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAyudaActionPerformed(evt);
+            }
+        });
 
         jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
@@ -90,6 +85,11 @@ public class Cuestionario extends javax.swing.JFrame {
         rbOpcbpreguno.setText("En el citosol");
 
         rbOpccprguno.setText("En la célula");
+        rbOpccprguno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbOpccprgunoActionPerformed(evt);
+            }
+        });
 
         jScrollPane3.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane3.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
@@ -166,16 +166,18 @@ public class Cuestionario extends javax.swing.JFrame {
 
         rbOpcbpregcinco.setText("En la respiración celular");
 
+        lblCuestionario.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lblCuestionario.setText("Cuestionario");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(btnAyuda)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane3)
                     .addComponent(jScrollPane2)
@@ -207,14 +209,18 @@ public class Cuestionario extends javax.swing.JFrame {
                                 .addComponent(rbOpcbpreguno)
                                 .addComponent(rbOpcbpregdos)))))
                 .addGap(23, 23, 23))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(203, 203, 203)
+                .addComponent(lblCuestionario, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(btnAyuda)
-                .addGap(42, 42, 42)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(21, 21, 21)
+                .addComponent(lblCuestionario, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -279,6 +285,16 @@ public class Cuestionario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_rbOpcapregunoActionPerformed
 
+    private void rbOpccprgunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbOpccprgunoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbOpccprgunoActionPerformed
+
+    private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
+        Ayuda i=new Ayuda();
+i.setVisible(true);
+dispose();
+    }//GEN-LAST:event_btnAyudaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -316,12 +332,12 @@ public class Cuestionario extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAyuda;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JLabel lblCuestionario;
     private javax.swing.JRadioButton rbOpcapregcinco;
     private javax.swing.JRadioButton rbOpcapregcuatro;
     private javax.swing.JRadioButton rbOpcapregdos;
@@ -342,6 +358,5 @@ public class Cuestionario extends javax.swing.JFrame {
     private javax.swing.JTextArea txtPregdos;
     private javax.swing.JTextArea txtPregtres;
     private javax.swing.JTextArea txtPreguno;
-    private javax.swing.JTextArea txtTitulo;
     // End of variables declaration//GEN-END:variables
 }

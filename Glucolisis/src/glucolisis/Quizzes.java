@@ -30,25 +30,13 @@ public class Quizzes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtTitulo = new javax.swing.JTextArea();
         btnCuestionario = new javax.swing.JButton();
         btnMenuprincipal = new javax.swing.JButton();
         btnAyuda = new javax.swing.JButton();
+        lblQuizzes = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("FrmQuizzes"); // NOI18N
-
-        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-
-        txtTitulo.setEditable(false);
-        txtTitulo.setBackground(new java.awt.Color(0, 153, 255));
-        txtTitulo.setColumns(20);
-        txtTitulo.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
-        txtTitulo.setRows(5);
-        txtTitulo.setText("           Quizzes");
-        jScrollPane1.setViewportView(txtTitulo);
 
         btnCuestionario.setBackground(new java.awt.Color(102, 204, 255));
         btnCuestionario.setText("Cuestionario");
@@ -66,12 +54,19 @@ public class Quizzes extends javax.swing.JFrame {
         });
 
         btnAyuda.setText("?");
+        btnAyuda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAyudaActionPerformed(evt);
+            }
+        });
+
+        lblQuizzes.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lblQuizzes.setText("Quizzes");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnMenuprincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -81,14 +76,17 @@ public class Quizzes extends javax.swing.JFrame {
                 .addGap(89, 89, 89)
                 .addComponent(btnCuestionario, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(103, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(lblQuizzes, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(btnAyuda)
-                .addGap(41, 41, 41)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
+                .addGap(36, 36, 36)
+                .addComponent(lblQuizzes, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(43, 43, 43)
                 .addComponent(btnCuestionario, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 173, Short.MAX_VALUE)
                 .addComponent(btnMenuprincipal))
@@ -103,9 +101,15 @@ public class Quizzes extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCuestionarioActionPerformed
 
     private void btnMenuprincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuprincipalActionPerformed
-        Inicio i = new Inicio();
-        i.setVisible(true);
+      
+        dispose();
     }//GEN-LAST:event_btnMenuprincipalActionPerformed
+
+    private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
+       Ayuda i=new Ayuda();
+i.setVisible(true);
+dispose();
+    }//GEN-LAST:event_btnAyudaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,7 +150,6 @@ public class Quizzes extends javax.swing.JFrame {
     private javax.swing.JButton btnAyuda;
     private javax.swing.JButton btnCuestionario;
     private javax.swing.JButton btnMenuprincipal;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea txtTitulo;
+    private javax.swing.JLabel lblQuizzes;
     // End of variables declaration//GEN-END:variables
 }

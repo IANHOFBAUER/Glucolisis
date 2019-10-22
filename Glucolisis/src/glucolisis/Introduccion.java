@@ -30,27 +30,15 @@ public class Introduccion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtTitle = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtIntroduccion = new javax.swing.JTextArea();
         btnAtras = new javax.swing.JButton();
         btnAdelante = new javax.swing.JButton();
         btnAyuda = new javax.swing.JButton();
+        lblIntroduccion = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("FrmIntroduccion"); // NOI18N
-
-        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-
-        txtTitle.setEditable(false);
-        txtTitle.setBackground(new java.awt.Color(0, 255, 255));
-        txtTitle.setColumns(20);
-        txtTitle.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
-        txtTitle.setRows(5);
-        txtTitle.setText("          Introducción");
-        jScrollPane1.setViewportView(txtTitle);
 
         txtIntroduccion.setEditable(false);
         txtIntroduccion.setColumns(20);
@@ -77,6 +65,14 @@ public class Introduccion extends javax.swing.JFrame {
         });
 
         btnAyuda.setText("?");
+        btnAyuda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAyudaActionPerformed(evt);
+            }
+        });
+
+        lblIntroduccion.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lblIntroduccion.setText("Introducción");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -84,9 +80,8 @@ public class Introduccion extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnAyuda)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 551, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(btnAyuda)
+                .addGap(512, 512, 512))
             .addGroup(layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -98,14 +93,18 @@ public class Introduccion extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnAdelante)
                         .addGap(24, 24, 24))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(170, 170, 170)
+                .addComponent(lblIntroduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(btnAyuda)
-                .addGap(31, 31, 31)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
+                .addGap(23, 23, 23)
+                .addComponent(lblIntroduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(43, 43, 43)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -118,14 +117,20 @@ public class Introduccion extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
-        Informacion at = new Informacion();
-        at.setVisible(true);
+   dispose();
     }//GEN-LAST:event_btnAtrasActionPerformed
 
     private void btnAdelanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdelanteActionPerformed
      Glucolisis del = new Glucolisis();
         del.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnAdelanteActionPerformed
+
+    private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
+        Ayuda i=new Ayuda();
+i.setVisible(true);
+dispose();
+    }//GEN-LAST:event_btnAyudaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,9 +172,8 @@ public class Introduccion extends javax.swing.JFrame {
     private javax.swing.JButton btnAdelante;
     private javax.swing.JButton btnAtras;
     private javax.swing.JButton btnAyuda;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lblIntroduccion;
     private javax.swing.JTextArea txtIntroduccion;
-    private javax.swing.JTextArea txtTitle;
     // End of variables declaration//GEN-END:variables
 }

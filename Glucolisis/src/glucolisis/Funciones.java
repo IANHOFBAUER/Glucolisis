@@ -30,26 +30,16 @@ public class Funciones extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtTitulo = new javax.swing.JTextPane();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtFunciones = new javax.swing.JTextArea();
         btnAtras = new javax.swing.JButton();
         btnAdelante = new javax.swing.JButton();
         btnMenuprincipal = new javax.swing.JButton();
         btnAyuda = new javax.swing.JButton();
+        lblFunciones = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("FrmFunciones"); // NOI18N
-
-        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-
-        txtTitulo.setEditable(false);
-        txtTitulo.setBackground(new java.awt.Color(0, 153, 153));
-        txtTitulo.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
-        txtTitulo.setText("            Funciones");
-        jScrollPane1.setViewportView(txtTitulo);
 
         txtFunciones.setEditable(false);
         txtFunciones.setColumns(20);
@@ -81,12 +71,19 @@ public class Funciones extends javax.swing.JFrame {
         });
 
         btnAyuda.setText("?");
+        btnAyuda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAyudaActionPerformed(evt);
+            }
+        });
+
+        lblFunciones.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lblFunciones.setText("Funciones");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnAtras)
@@ -105,14 +102,18 @@ public class Funciones extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(btnMenuprincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(83, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblFunciones, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(229, 229, 229))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(btnAyuda)
-                .addGap(26, 26, 26)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(5, 5, 5)
+                .addComponent(lblFunciones, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(13, 13, 13)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -129,17 +130,24 @@ public class Funciones extends javax.swing.JFrame {
     private void btnAdelanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdelanteActionPerformed
         Fases fu = new Fases();
         fu.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnAdelanteActionPerformed
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
-        Glucolisis gl = new Glucolisis();
-        gl.setVisible(true);
+     dispose();
     }//GEN-LAST:event_btnAtrasActionPerformed
 
     private void btnMenuprincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuprincipalActionPerformed
         Inicio in = new Inicio();
         in.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnMenuprincipalActionPerformed
+
+    private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
+        Ayuda i=new Ayuda();
+i.setVisible(true);
+dispose();
+    }//GEN-LAST:event_btnAyudaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,9 +189,8 @@ public class Funciones extends javax.swing.JFrame {
     private javax.swing.JButton btnAtras;
     private javax.swing.JButton btnAyuda;
     private javax.swing.JButton btnMenuprincipal;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lblFunciones;
     private javax.swing.JTextArea txtFunciones;
-    private javax.swing.JTextPane txtTitulo;
     // End of variables declaration//GEN-END:variables
 }

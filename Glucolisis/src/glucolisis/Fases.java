@@ -30,28 +30,16 @@ public class Fases extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtTitulo = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtFases = new javax.swing.JTextArea();
         btnAtras = new javax.swing.JButton();
         btnMenuprincipal = new javax.swing.JButton();
         btnAyuda = new javax.swing.JButton();
-        jlblcitosol = new javax.swing.JLabel();
+        lblcitosol = new javax.swing.JLabel();
+        lblfases = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("FrmFases"); // NOI18N
-
-        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-
-        txtTitulo.setEditable(false);
-        txtTitulo.setBackground(new java.awt.Color(0, 102, 102));
-        txtTitulo.setColumns(20);
-        txtTitulo.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
-        txtTitulo.setRows(5);
-        txtTitulo.setText("                     Fases\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n3\n3\n3\n3\n3\n3\n3\n3");
-        jScrollPane1.setViewportView(txtTitulo);
 
         txtFases.setEditable(false);
         txtFases.setColumns(20);
@@ -76,41 +64,52 @@ public class Fases extends javax.swing.JFrame {
         });
 
         btnAyuda.setText("?");
+        btnAyuda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAyudaActionPerformed(evt);
+            }
+        });
 
-        jlblcitosol.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jlblcitosol.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlblcitosol.setIcon(new javax.swing.ImageIcon("Nas94-2\\g18progb\\18PROGB0115\\Downloads\\citosol.png")); // NOI18N
-        jlblcitosol.setText("EL citosol");
+        lblcitosol.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblcitosol.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblcitosol.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/citosol.png"))); // NOI18N
+        lblcitosol.setText("EL citosol");
+
+        lblfases.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lblfases.setText("Fases");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(btnAyuda)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jlblcitosol, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblcitosol, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 653, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnAtras)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnMenuprincipal)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblfases, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(149, 149, 149))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(btnAyuda)
-                .addGap(27, 27, 27)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14)
+                .addComponent(lblfases, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jlblcitosol, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblcitosol, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnMenuprincipal)
@@ -122,14 +121,19 @@ public class Fases extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
-        Funciones f = new Funciones();
-        f.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnAtrasActionPerformed
 
     private void btnMenuprincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuprincipalActionPerformed
-        Inicio in = new Inicio();
-        in.setVisible(true);
+        
+        dispose();
     }//GEN-LAST:event_btnMenuprincipalActionPerformed
+
+    private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
+        Ayuda i=new Ayuda();
+i.setVisible(true);
+dispose();
+    }//GEN-LAST:event_btnAyudaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -170,10 +174,9 @@ public class Fases extends javax.swing.JFrame {
     private javax.swing.JButton btnAtras;
     private javax.swing.JButton btnAyuda;
     private javax.swing.JButton btnMenuprincipal;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JLabel jlblcitosol;
+    private javax.swing.JLabel lblcitosol;
+    private javax.swing.JLabel lblfases;
     private javax.swing.JTextArea txtFases;
-    private javax.swing.JTextArea txtTitulo;
     // End of variables declaration//GEN-END:variables
 }
