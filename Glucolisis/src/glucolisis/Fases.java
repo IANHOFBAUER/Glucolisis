@@ -37,6 +37,8 @@ public class Fases extends javax.swing.JFrame {
         btnAyuda = new javax.swing.JButton();
         lblcitosol = new javax.swing.JLabel();
         lblfases = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtfases = new javax.swing.JTextPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("FrmFases"); // NOI18N
@@ -44,10 +46,10 @@ public class Fases extends javax.swing.JFrame {
 
         txtFases.setEditable(false);
         txtFases.setColumns(20);
-        txtFases.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        txtFases.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         txtFases.setLineWrap(true);
         txtFases.setRows(5);
-        txtFases.setText("Fase 1. Un grupo fosfato se transfiere del ATP a la \nglucosa y la tranforma en glucosa-6-fosfato, es más \nreactiva que la glucosa y la adición del fosfato \nretiene la glucosa dentro de la célula, porque la \nglucosa con un fosfato es incapaz de atravesar por sí \nsola la membrana.\n\nFase 2. La glucosa-6-fosfato se convierte en su isómero,\n la fructosa-6-fosfato.\n\nFase 3. Un grupo fosfato se transfiere del ATP a la \nfructosa-6-fosfato y se produce fructosa-1,6-bifosfato. \nEste paso lo cataliza la enzima fosfofructocinasa, \nque puede ser regulada para acelerar o frenar la vía de \nla glucólisis.\n\nFase 4. La fructosa-1,6-bifosfato se rompe para generar \ndos azúcares de tres carbonos: la dihidroxiacetona \nfosfato y el gliceraldehído-3-fosfato. Estas moléculas \nson isómeros el uno del otro, pero solo el \ngliceraldehído-3-fosfato puede continuar directamente \ncon los siguientes pasosde la glucólisis.\n\nFase 5. La DHAP se convierte en gliceraldehído-3-fosfato.\n Ambas moléculas existen en equilibrio, pero dicho \nequilibrio \"empuja\" fuertemente hacia abajo, considerando\n el orden del, conforme se va utilizando el \ngliceraldehído-3-fosfato. Es así que al final toda\nla DHAP se convierte en gliceraldehído-3-fosfato.\nEn la segunda mitad de la glucólisis, los azúcares de \ntres carbonos formados en la primera mitad\ndel proceso se someten a una serie de transformaciones \nadicionales para convertirse al final en piruvato. \nEn el proceso se producen cuatro moléculas de ATP junto \ncon dos de NADH.\n\nFase 6. Dos semirreaciones ocurren simultáneamente:\n1) la oxidación del gliceraldehido-3-fosfato \n(uno de los azúcares de tres carbonos que se forma en la\n fase inicial), y\n2) la reducción del NAD La reacción general es exergónica y libera la energía que luego se\nusa para fosforilar la molécula, lo que forma 1,3-bifosfoglicerato.\nPaso 7. El 1,3-bifosfoglicerato dona uno de sus grupos fosfato al ADP, lo transforma en una\nmolécula de ATP y en el proceso se convierte en 3-fosfoglicerato.\nPaso 8. El 3-fosfoglicerato se convierte en su isómero, el 2-fosfoglicerato.\nPaso 9. El 2-fosfoglicerato pierde una molécula de agua y se transforma en fosfoenolpiruvato\n(PEP). El PEP es una molécula inestable, lista para perder su grupo fosfato en el paso final de la\nglucólisis.\nPaso 10. El PEP dona sin dificultad su grupo fosfato a un y se produce una segunda molécula de\nATP. Al perder su fosfato, el PEP\\ se convierte en piruvato, el producto final de la glucólisis.  ");
+        txtFases.setText("Fase 1. Un grupo fosfato se transfiere del ATP a la \nglucosa y la tranforma en glucosa-6-fosfato, es más \nreactiva que la glucosa y la adición del fosfato \nretiene la glucosa dentro de la célula, porque la \nglucosa con un fosfato es incapaz de atravesar por sí \nsola la membrana.\n\n\nFase 2. La glucosa-6-fosfato se convierte en su isómero,\n la fructosa-6-fosfato.\n\n\nFase 3. Un grupo fosfato se transfiere del ATP a la \nfructosa-6-fosfato y se produce fructosa-1,6-bifosfato. \nEste paso lo cataliza la enzima fosfofructocinasa, \nque puede ser regulada para acelerar o frenar la vía de \nla glucólisis.\n\nFase 4. La fructosa-1,6-bifosfato se rompe para generar \ndos azúcares de tres carbonos: la dihidroxiacetona \nfosfato y el gliceraldehído-3-fosfato. Estas moléculas \nson isómeros el uno del otro, pero solo el \ngliceraldehído-3-fosfato puede continuar directamente \ncon los siguientes pasosde la glucólisis.\n\nFase 5. La DHAP se convierte en gliceraldehído-3-fosfato.\n Ambas moléculas existen en equilibrio, pero dicho \nequilibrio \"empuja\" fuertemente hacia abajo, considerando\n el orden del, conforme se va utilizando el \ngliceraldehído-3-fosfato. Es así que al final toda\nla DHAP se convierte en gliceraldehído-3-fosfato.\nEn la segunda mitad de la glucólisis, los azúcares de \ntres carbonos formados en la primera mitad\ndel proceso se someten a una serie de transformaciones \nadicionales para convertirse al final en piruvato. \nEn el proceso se producen cuatro moléculas de ATP junto \ncon dos de NADH");
         txtFases.setWrapStyleWord(true);
         jScrollPane2.setViewportView(txtFases);
 
@@ -82,43 +84,59 @@ public class Fases extends javax.swing.JFrame {
         lblfases.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
         lblfases.setText("Fases");
 
+        txtfases.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
+        txtfases.setText("Fase 6. Dos semirreaciones ocurren simultáneamente:\n1) la oxidación del gliceraldehido-3-fosfato \n(uno de los azúcares de tres carbonos que se forma en la\n fase inicial), y\n2) la reducción del NAD La reacción general es exergónica y libera la energía que luego se\nusa para fosforilar la molécula, lo que forma 1,3-bifosfoglicerato.\nPaso 7. El 1,3-bifosfoglicerato dona uno de sus grupos fosfato al ADP, lo transforma en una\nmolécula de ATP y en el proceso se convierte en 3-fosfoglicerato.\nPaso 8. El 3-fosfoglicerato se convierte en su isómero, el 2-fosfoglicerato.\nPaso 9. El 2-fosfoglicerato pierde una molécula de agua y se transforma en fosfoenolpiruvato\n(PEP). El PEP es una molécula inestable, lista para perder su grupo fosfato en el paso final de la\nglucólisis.\nPaso 10. El PEP dona sin dificultad su grupo fosfato a un y se produce una segunda molécula de\nATP. Al perder su fosfato, el PEP\\ se convierte en piruvato, el producto final de la glucólisis.  ");
+        jScrollPane1.setViewportView(txtfases);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(btnAyuda)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblfases, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(153, 153, 153))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblcitosol, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 653, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(lblcitosol, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 663, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
                         .addComponent(btnAtras)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnMenuprincipal)))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblfases, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(149, 149, 149))
+                        .addComponent(btnMenuprincipal)
+                        .addGap(52, 52, 52))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(btnAyuda)
-                .addGap(14, 14, 14)
-                .addComponent(lblfases, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnAyuda)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(lblfases, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(57, 57, 57)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
                 .addComponent(lblcitosol, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnMenuprincipal)
-                    .addComponent(btnAtras))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addComponent(btnAtras)
+                        .addContainerGap(22, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addComponent(btnMenuprincipal)
+                        .addGap(25, 25, 25))))
         );
 
         pack();
@@ -180,9 +198,11 @@ i.setVisible(true);
     private javax.swing.JButton btnAtras;
     private javax.swing.JButton btnAyuda;
     private javax.swing.JButton btnMenuprincipal;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblcitosol;
     private javax.swing.JLabel lblfases;
     private javax.swing.JTextArea txtFases;
+    private javax.swing.JTextPane txtfases;
     // End of variables declaration//GEN-END:variables
 }

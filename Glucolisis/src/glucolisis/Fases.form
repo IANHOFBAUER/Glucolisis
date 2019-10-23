@@ -27,44 +27,61 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Component id="btnAyuda" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="lblfases" min="-2" pref="258" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="153" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lblcitosol" max="32767" attributes="0"/>
-                  <Component id="jScrollPane2" pref="653" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                      <Component id="jScrollPane2" min="-2" pref="325" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="lblcitosol" alignment="1" pref="663" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                       <Component id="btnAtras" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="btnMenuprincipal" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="lblfases" min="-2" pref="258" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="149" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="btnAyuda" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-              <Component id="lblfases" min="-2" pref="68" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jScrollPane2" min="-2" pref="199" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="lblcitosol" min="-2" pref="93" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="btnMenuprincipal" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnAtras" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="btnAyuda" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <Component id="lblfases" min="-2" pref="68" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace pref="25" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
+                  <Component id="jScrollPane2" pref="181" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+              <Component id="lblcitosol" min="-2" pref="93" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                      <Component id="btnAtras" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="22" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                      <Component id="btnMenuprincipal" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
           </Group>
       </Group>
     </DimensionLayout>
@@ -82,11 +99,11 @@
             <Property name="editable" type="boolean" value="false"/>
             <Property name="columns" type="int" value="20"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="13" style="0"/>
+              <Font name="Arial" size="11" style="0"/>
             </Property>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Fase 1. Un grupo fosfato se transfiere del ATP a la &#xa;glucosa y la tranforma en glucosa-6-fosfato, es m&#xe1;s &#xa;reactiva que la glucosa y la adici&#xf3;n del fosfato &#xa;retiene la glucosa dentro de la c&#xe9;lula, porque la &#xa;glucosa con un fosfato es incapaz de atravesar por s&#xed; &#xa;sola la membrana.&#xa;&#xa;Fase 2. La glucosa-6-fosfato se convierte en su is&#xf3;mero,&#xa; la fructosa-6-fosfato.&#xa;&#xa;Fase 3. Un grupo fosfato se transfiere del ATP a la &#xa;fructosa-6-fosfato y se produce fructosa-1,6-bifosfato. &#xa;Este paso lo cataliza la enzima fosfofructocinasa, &#xa;que puede ser regulada para acelerar o frenar la v&#xed;a de &#xa;la gluc&#xf3;lisis.&#xa;&#xa;Fase 4. La fructosa-1,6-bifosfato se rompe para generar &#xa;dos az&#xfa;cares de tres carbonos: la dihidroxiacetona &#xa;fosfato y el gliceraldeh&#xed;do-3-fosfato. Estas mol&#xe9;culas &#xa;son is&#xf3;meros el uno del otro, pero solo el &#xa;gliceraldeh&#xed;do-3-fosfato puede continuar directamente &#xa;con los siguientes pasosde la gluc&#xf3;lisis.&#xa;&#xa;Fase 5. La DHAP se convierte en gliceraldeh&#xed;do-3-fosfato.&#xa; Ambas mol&#xe9;culas existen en equilibrio, pero dicho &#xa;equilibrio &quot;empuja&quot; fuertemente hacia abajo, considerando&#xa; el orden del, conforme se va utilizando el &#xa;gliceraldeh&#xed;do-3-fosfato. Es as&#xed; que al final toda&#xa;la DHAP se convierte en gliceraldeh&#xed;do-3-fosfato.&#xa;En la segunda mitad de la gluc&#xf3;lisis, los az&#xfa;cares de &#xa;tres carbonos formados en la primera mitad&#xa;del proceso se someten a una serie de transformaciones &#xa;adicionales para convertirse al final en piruvato. &#xa;En el proceso se producen cuatro mol&#xe9;culas de ATP junto &#xa;con dos de NADH.&#xa;&#xa;Fase 6. Dos semirreaciones ocurren simult&#xe1;neamente:&#xa;1) la oxidaci&#xf3;n del gliceraldehido-3-fosfato &#xa;(uno de los az&#xfa;cares de tres carbonos que se forma en la&#xa; fase inicial), y&#xa;2) la reducci&#xf3;n del NAD La reacci&#xf3;n general es exerg&#xf3;nica y libera la energ&#xed;a que luego se&#xa;usa para fosforilar la mol&#xe9;cula, lo que forma 1,3-bifosfoglicerato.&#xa;Paso 7. El 1,3-bifosfoglicerato dona uno de sus grupos fosfato al ADP, lo transforma en una&#xa;mol&#xe9;cula de ATP y en el proceso se convierte en 3-fosfoglicerato.&#xa;Paso 8. El 3-fosfoglicerato se convierte en su is&#xf3;mero, el 2-fosfoglicerato.&#xa;Paso 9. El 2-fosfoglicerato pierde una mol&#xe9;cula de agua y se transforma en fosfoenolpiruvato&#xa;(PEP). El PEP es una mol&#xe9;cula inestable, lista para perder su grupo fosfato en el paso final de la&#xa;gluc&#xf3;lisis.&#xa;Paso 10. El PEP dona sin dificultad su grupo fosfato a un y se produce una segunda mol&#xe9;cula de&#xa;ATP. Al perder su fosfato, el PEP\u005c se convierte en piruvato, el producto final de la gluc&#xf3;lisis.  " containsInvalidXMLChars="true"/>
+            <Property name="text" type="java.lang.String" value="Fase 1. Un grupo fosfato se transfiere del ATP a la &#xa;glucosa y la tranforma en glucosa-6-fosfato, es m&#xe1;s &#xa;reactiva que la glucosa y la adici&#xf3;n del fosfato &#xa;retiene la glucosa dentro de la c&#xe9;lula, porque la &#xa;glucosa con un fosfato es incapaz de atravesar por s&#xed; &#xa;sola la membrana.&#xa;&#xa;&#xa;Fase 2. La glucosa-6-fosfato se convierte en su is&#xf3;mero,&#xa; la fructosa-6-fosfato.&#xa;&#xa;&#xa;Fase 3. Un grupo fosfato se transfiere del ATP a la &#xa;fructosa-6-fosfato y se produce fructosa-1,6-bifosfato. &#xa;Este paso lo cataliza la enzima fosfofructocinasa, &#xa;que puede ser regulada para acelerar o frenar la v&#xed;a de &#xa;la gluc&#xf3;lisis.&#xa;&#xa;Fase 4. La fructosa-1,6-bifosfato se rompe para generar &#xa;dos az&#xfa;cares de tres carbonos: la dihidroxiacetona &#xa;fosfato y el gliceraldeh&#xed;do-3-fosfato. Estas mol&#xe9;culas &#xa;son is&#xf3;meros el uno del otro, pero solo el &#xa;gliceraldeh&#xed;do-3-fosfato puede continuar directamente &#xa;con los siguientes pasosde la gluc&#xf3;lisis.&#xa;&#xa;Fase 5. La DHAP se convierte en gliceraldeh&#xed;do-3-fosfato.&#xa; Ambas mol&#xe9;culas existen en equilibrio, pero dicho &#xa;equilibrio &quot;empuja&quot; fuertemente hacia abajo, considerando&#xa; el orden del, conforme se va utilizando el &#xa;gliceraldeh&#xed;do-3-fosfato. Es as&#xed; que al final toda&#xa;la DHAP se convierte en gliceraldeh&#xed;do-3-fosfato.&#xa;En la segunda mitad de la gluc&#xf3;lisis, los az&#xfa;cares de &#xa;tres carbonos formados en la primera mitad&#xa;del proceso se someten a una serie de transformaciones &#xa;adicionales para convertirse al final en piruvato. &#xa;En el proceso se producen cuatro mol&#xe9;culas de ATP junto &#xa;con dos de NADH"/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
           </Properties>
         </Component>
@@ -142,5 +159,22 @@
         <Property name="text" type="java.lang.String" value="Fases"/>
       </Properties>
     </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextPane" name="txtfases">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="11" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Fase 6. Dos semirreaciones ocurren simult&#xe1;neamente:&#xa;1) la oxidaci&#xf3;n del gliceraldehido-3-fosfato &#xa;(uno de los az&#xfa;cares de tres carbonos que se forma en la&#xa; fase inicial), y&#xa;2) la reducci&#xf3;n del NAD La reacci&#xf3;n general es exerg&#xf3;nica y libera la energ&#xed;a que luego se&#xa;usa para fosforilar la mol&#xe9;cula, lo que forma 1,3-bifosfoglicerato.&#xa;Paso 7. El 1,3-bifosfoglicerato dona uno de sus grupos fosfato al ADP, lo transforma en una&#xa;mol&#xe9;cula de ATP y en el proceso se convierte en 3-fosfoglicerato.&#xa;Paso 8. El 3-fosfoglicerato se convierte en su is&#xf3;mero, el 2-fosfoglicerato.&#xa;Paso 9. El 2-fosfoglicerato pierde una mol&#xe9;cula de agua y se transforma en fosfoenolpiruvato&#xa;(PEP). El PEP es una mol&#xe9;cula inestable, lista para perder su grupo fosfato en el paso final de la&#xa;gluc&#xf3;lisis.&#xa;Paso 10. El PEP dona sin dificultad su grupo fosfato a un y se produce una segunda mol&#xe9;cula de&#xa;ATP. Al perder su fosfato, el PEP\u005c se convierte en piruvato, el producto final de la gluc&#xf3;lisis.  " containsInvalidXMLChars="true"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
   </SubComponents>
 </Form>
