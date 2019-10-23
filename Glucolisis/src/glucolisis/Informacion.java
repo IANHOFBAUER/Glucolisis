@@ -42,7 +42,9 @@ public class Informacion extends javax.swing.JFrame {
         setTitle("Contenido ");
         setFocusTraversalPolicyProvider(true);
         setName("FrmInformacion"); // NOI18N
+        setResizable(false);
 
+        btnAyuda.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         btnAyuda.setText("?");
         btnAyuda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,7 +52,7 @@ public class Informacion extends javax.swing.JFrame {
             }
         });
 
-        btnIntroduccion.setBackground(new java.awt.Color(0, 255, 255));
+        btnIntroduccion.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         btnIntroduccion.setText("Introducción");
         btnIntroduccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,7 +60,7 @@ public class Informacion extends javax.swing.JFrame {
             }
         });
 
-        btnGlucolisis.setBackground(new java.awt.Color(0, 204, 204));
+        btnGlucolisis.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         btnGlucolisis.setText("Glucólisis:Un proceso metabólico");
         btnGlucolisis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,7 +68,7 @@ public class Informacion extends javax.swing.JFrame {
             }
         });
 
-        btnFunciones.setBackground(new java.awt.Color(0, 153, 153));
+        btnFunciones.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         btnFunciones.setText("Funciones");
         btnFunciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,6 +76,7 @@ public class Informacion extends javax.swing.JFrame {
             }
         });
 
+        jButton6.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         jButton6.setText("Menu Principal ");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,7 +84,7 @@ public class Informacion extends javax.swing.JFrame {
             }
         });
 
-        btnFases.setBackground(new java.awt.Color(0, 102, 102));
+        btnFases.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         btnFases.setText("Fases");
         btnFases.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,7 +168,7 @@ public class Informacion extends javax.swing.JFrame {
     private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
         Ayuda i=new Ayuda();
 i.setVisible(true);
-dispose();
+
     }//GEN-LAST:event_btnAyudaActionPerformed
 
     /**
