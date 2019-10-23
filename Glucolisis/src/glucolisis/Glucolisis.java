@@ -41,11 +41,13 @@ public class Glucolisis extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("FrmGlucolisis"); // NOI18N
+        setResizable(false);
 
         jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         txtGlucolisis.setEditable(false);
         txtGlucolisis.setColumns(20);
+        txtGlucolisis.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtGlucolisis.setLineWrap(true);
         txtGlucolisis.setRows(5);
         txtGlucolisis.setText("La glucólisis glicolisis es la vía metabólica encargada de oxidar la glucosa con la finalidad de obtener energía para la célula.Consist en diez reacciones enzimáticas conscutivas que convierten la glucosa en dos moléculas de piruvato, el cual es capaz de seguir otras vías metabólicas y así continuar entregando energía al organismo.\n\nDurante la glucólisis se obtiene un rendimiento \nneto de dos moléculas de ATP y dos moléculas\nNADH; el ATP puede ser usado como fuente de \nenergía para realizar trabajo metabólico, \nmientras qu el NADH puede tener distintos destinos\n \nNADH; \n");
@@ -53,6 +55,7 @@ public class Glucolisis extends javax.swing.JFrame {
         jScrollPane2.setViewportView(txtGlucolisis);
 
         btnAtras.setBackground(new java.awt.Color(204, 204, 204));
+        btnAtras.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         btnAtras.setText("Atras\n");
         btnAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,6 +63,7 @@ public class Glucolisis extends javax.swing.JFrame {
             }
         });
 
+        btnAdelante.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         btnAdelante.setText("Adelante\n");
         btnAdelante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,6 +71,7 @@ public class Glucolisis extends javax.swing.JFrame {
             }
         });
 
+        btnMenuprincipal.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         btnMenuprincipal.setText("Menu Principal\n");
         btnMenuprincipal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,11 +112,12 @@ public class Glucolisis extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(89, 89, 89)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(lblGlucolisis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(lblGlucolisis, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,7 +160,7 @@ public class Glucolisis extends javax.swing.JFrame {
     private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
       Ayuda i=new Ayuda();
 i.setVisible(true);
-dispose();
+
     }//GEN-LAST:event_btnAyudaActionPerformed
 
     /**

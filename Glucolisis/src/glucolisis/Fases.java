@@ -40,15 +40,18 @@ public class Fases extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("FrmFases"); // NOI18N
+        setResizable(false);
 
         txtFases.setEditable(false);
         txtFases.setColumns(20);
+        txtFases.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtFases.setLineWrap(true);
         txtFases.setRows(5);
         txtFases.setText("Fase 1. Un grupo fosfato se transfiere del ATP a la \nglucosa y la tranforma en glucosa-6-fosfato, es más \nreactiva que la glucosa y la adición del fosfato \nretiene la glucosa dentro de la célula, porque la \nglucosa con un fosfato es incapaz de atravesar por sí \nsola la membrana.\n\nFase 2. La glucosa-6-fosfato se convierte en su isómero,\n la fructosa-6-fosfato.\n\nFase 3. Un grupo fosfato se transfiere del ATP a la \nfructosa-6-fosfato y se produce fructosa-1,6-bifosfato. \nEste paso lo cataliza la enzima fosfofructocinasa, \nque puede ser regulada para acelerar o frenar la vía de \nla glucólisis.\n\nFase 4. La fructosa-1,6-bifosfato se rompe para generar \ndos azúcares de tres carbonos: la dihidroxiacetona \nfosfato y el gliceraldehído-3-fosfato. Estas moléculas \nson isómeros el uno del otro, pero solo el \ngliceraldehído-3-fosfato puede continuar directamente \ncon los siguientes pasosde la glucólisis.\n\nFase 5. La DHAP se convierte en gliceraldehído-3-fosfato.\n Ambas moléculas existen en equilibrio, pero dicho \nequilibrio \"empuja\" fuertemente hacia abajo, considerando\n el orden del, conforme se va utilizando el \ngliceraldehído-3-fosfato. Es así que al final toda\nla DHAP se convierte en gliceraldehído-3-fosfato.\nEn la segunda mitad de la glucólisis, los azúcares de \ntres carbonos formados en la primera mitad\ndel proceso se someten a una serie de transformaciones \nadicionales para convertirse al final en piruvato. \nEn el proceso se producen cuatro moléculas de ATP junto \ncon dos de NADH.\n\nFase 6. Dos semirreaciones ocurren simultáneamente:\n1) la oxidación del gliceraldehido-3-fosfato \n(uno de los azúcares de tres carbonos que se forma en la\n fase inicial), y\n2) la reducción del NAD La reacción general es exergónica y libera la energía que luego se\nusa para fosforilar la molécula, lo que forma 1,3-bifosfoglicerato.\nPaso 7. El 1,3-bifosfoglicerato dona uno de sus grupos fosfato al ADP, lo transforma en una\nmolécula de ATP y en el proceso se convierte en 3-fosfoglicerato.\nPaso 8. El 3-fosfoglicerato se convierte en su isómero, el 2-fosfoglicerato.\nPaso 9. El 2-fosfoglicerato pierde una molécula de agua y se transforma en fosfoenolpiruvato\n(PEP). El PEP es una molécula inestable, lista para perder su grupo fosfato en el paso final de la\nglucólisis.\nPaso 10. El PEP dona sin dificultad su grupo fosfato a un y se produce una segunda molécula de\nATP. Al perder su fosfato, el PEP\\ se convierte en piruvato, el producto final de la glucólisis.  ");
         txtFases.setWrapStyleWord(true);
         jScrollPane2.setViewportView(txtFases);
 
+        btnAtras.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         btnAtras.setText("Atras");
         btnAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,6 +59,7 @@ public class Fases extends javax.swing.JFrame {
             }
         });
 
+        btnMenuprincipal.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         btnMenuprincipal.setText("Menu Principal\n");
         btnMenuprincipal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,7 +74,7 @@ public class Fases extends javax.swing.JFrame {
             }
         });
 
-        lblcitosol.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblcitosol.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblcitosol.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblcitosol.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/citosol.png"))); // NOI18N
         lblcitosol.setText("EL citosol");
@@ -121,6 +125,8 @@ public class Fases extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
+        Funciones fu = new Funciones();
+             fu.setVisible(true);   
         dispose();
     }//GEN-LAST:event_btnAtrasActionPerformed
 
@@ -132,7 +138,7 @@ public class Fases extends javax.swing.JFrame {
     private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
         Ayuda i=new Ayuda();
 i.setVisible(true);
-dispose();
+
     }//GEN-LAST:event_btnAyudaActionPerformed
 
     /**

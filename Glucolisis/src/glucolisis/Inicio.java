@@ -31,7 +31,6 @@ public class Inicio extends javax.swing.JFrame {
     private void initComponents() {
 
         btnInformacion = new javax.swing.JButton();
-        btnQuizzes = new javax.swing.JButton();
         btnAyuda = new javax.swing.JButton();
         lblInicio = new javax.swing.JLabel();
 
@@ -39,20 +38,13 @@ public class Inicio extends javax.swing.JFrame {
         setTitle("Menu principal");
         setBackground(new java.awt.Color(204, 204, 204));
         setName("FrmGluco"); // NOI18N
+        setResizable(false);
 
-        btnInformacion.setBackground(new java.awt.Color(0, 102, 102));
+        btnInformacion.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         btnInformacion.setText("Informacion");
         btnInformacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnInformacionActionPerformed(evt);
-            }
-        });
-
-        btnQuizzes.setBackground(new java.awt.Color(0, 102, 102));
-        btnQuizzes.setText("Quizzes");
-        btnQuizzes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnQuizzesActionPerformed(evt);
             }
         });
 
@@ -77,46 +69,36 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(btnAyuda, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addComponent(btnInformacion, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 170, Short.MAX_VALUE)
-                .addComponent(btnQuizzes, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(151, 151, 151)
-                .addComponent(lblInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(169, 169, 169)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnInformacion, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(177, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(btnAyuda)
-                .addGap(26, 26, 26)
-                .addComponent(lblInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnInformacion, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnQuizzes, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(92, 92, 92))
+                .addComponent(btnAyuda, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(lblInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnInformacion, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnQuizzesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuizzesActionPerformed
-        Quizzes Quiz = new Quizzes();
-        Quiz.setVisible(true);
-    }//GEN-LAST:event_btnQuizzesActionPerformed
-
     private void btnInformacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInformacionActionPerformed
         Informacion info = new Informacion();
         info.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnInformacionActionPerformed
 
     private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
 Ayuda i=new Ayuda();
 i.setVisible(true);
-dispose();
+
     }//GEN-LAST:event_btnAyudaActionPerformed
 
     /**
@@ -158,7 +140,6 @@ dispose();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAyuda;
     private javax.swing.JButton btnInformacion;
-    private javax.swing.JButton btnQuizzes;
     private javax.swing.JLabel lblInicio;
     // End of variables declaration//GEN-END:variables
 }

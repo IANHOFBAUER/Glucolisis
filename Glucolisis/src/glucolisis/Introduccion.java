@@ -36,19 +36,23 @@ public class Introduccion extends javax.swing.JFrame {
         btnAdelante = new javax.swing.JButton();
         btnAyuda = new javax.swing.JButton();
         lblIntroduccion = new javax.swing.JLabel();
+        lblGlucologo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("FrmIntroduccion"); // NOI18N
+        setResizable(false);
 
         txtIntroduccion.setEditable(false);
         txtIntroduccion.setColumns(20);
+        txtIntroduccion.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtIntroduccion.setLineWrap(true);
         txtIntroduccion.setRows(5);
-        txtIntroduccion.setText("Así como varios de estos proceso de abastecimiento\nde energía que se encuentra en la mayoría de organismos \ny mas específicamente las células eucariontes en las cuales\nse encuentran orgánulos como el citosol, la mitocondria en\ndonde asimismo se ejecuta esos procesos enérgeticos en los \nque se metabolizan las biomoleculas de ciertos alimentos, el\nfuncionamiento correcto de las células.\n   ");
+        txtIntroduccion.setText("Así como varios de estos proceso de abastecimientode energía que se encuentra en la mayoría de organismos y mas específicamente las células eucariontes en las cuales se encuentran orgánulos como el citosol, la mitocondria en donde asimismo se ejecuta esos procesos enérgeticos en los que se metabolizan las biomoleculas de ciertos alimentos, elfuncionamiento correcto de las células.\n   ");
         txtIntroduccion.setWrapStyleWord(true);
         jScrollPane2.setViewportView(txtIntroduccion);
 
-        btnAtras.setBackground(new java.awt.Color(204, 204, 204));
+        btnAtras.setBackground(new java.awt.Color(204, 204, 255));
+        btnAtras.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         btnAtras.setText("Atras");
         btnAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,7 +60,8 @@ public class Introduccion extends javax.swing.JFrame {
             }
         });
 
-        btnAdelante.setBackground(new java.awt.Color(204, 204, 204));
+        btnAdelante.setBackground(new java.awt.Color(204, 204, 255));
+        btnAdelante.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         btnAdelante.setText("Adelante");
         btnAdelante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,6 +79,9 @@ public class Introduccion extends javax.swing.JFrame {
         lblIntroduccion.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
         lblIntroduccion.setText("Introducción");
 
+        lblGlucologo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Glucologo.png"))); // NOI18N
+        lblGlucologo.setText(".");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -82,17 +90,19 @@ public class Introduccion extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(btnAyuda)
                 .addGap(512, 512, 512))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane2)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
                         .addComponent(btnAtras)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAdelante)
-                        .addGap(24, 24, 24))))
+                        .addComponent(lblGlucologo, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(81, 81, 81)
+                        .addComponent(btnAdelante))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane2)))
+                .addGap(24, 24, 24))
             .addGroup(layout.createSequentialGroup()
                 .addGap(170, 170, 170)
                 .addComponent(lblIntroduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -100,17 +110,23 @@ public class Introduccion extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(btnAyuda)
-                .addGap(23, 23, 23)
-                .addComponent(lblIntroduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAtras)
-                    .addComponent(btnAdelante))
-                .addGap(28, 28, 28))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(lblIntroduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnAtras)
+                            .addComponent(btnAdelante))
+                        .addGap(71, 71, 71))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblGlucologo, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(56, 56, 56))))
         );
 
         pack();
@@ -129,7 +145,7 @@ public class Introduccion extends javax.swing.JFrame {
     private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
         Ayuda i=new Ayuda();
 i.setVisible(true);
-dispose();
+
     }//GEN-LAST:event_btnAyudaActionPerformed
 
     /**
@@ -173,6 +189,7 @@ dispose();
     private javax.swing.JButton btnAtras;
     private javax.swing.JButton btnAyuda;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lblGlucologo;
     private javax.swing.JLabel lblIntroduccion;
     private javax.swing.JTextArea txtIntroduccion;
     // End of variables declaration//GEN-END:variables

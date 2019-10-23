@@ -4,6 +4,7 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="name" type="java.lang.String" value="FrmFunciones" noResource="true"/>
+    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -35,23 +36,23 @@
               <Component id="btnAyuda" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
-          <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-                      <Component id="jScrollPane2" min="-2" pref="449" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnMenuprincipal" min="-2" pref="181" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace pref="83" max="32767" attributes="0"/>
-          </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
               <Component id="lblFunciones" min="-2" pref="177" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="229" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnMenuprincipal" min="-2" pref="181" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                      <Component id="jScrollPane2" min="-2" pref="449" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="89" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -61,9 +62,9 @@
               <Component id="btnAyuda" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
               <Component id="lblFunciones" min="-2" pref="54" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jScrollPane2" min="-2" pref="210" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-              <Component id="jScrollPane2" min="-2" pref="208" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnAtras" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnAdelante" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -87,6 +88,9 @@
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
             <Property name="columns" type="int" value="20"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="13" style="0"/>
+            </Property>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
             <Property name="text" type="java.lang.String" value="Las funciones de la gluc&#xf3;lisis son una generaci&#xf3;n de&#xa;mol&#xe9;culas de alta energ&#xed;a (ATP NADH) como fuente de&#xa;energ&#xed;a c&#xe9;lular en procesos de respiraci&#xf3;n aer&#xf3;bica&#xa;(presencia de oxigeno) y fermentaci&#xf3;n (ausencia de&#xa;oxigeno).&#xa;&#xa;la generaci&#xf3;n de piruvato que pasar&#xe1; al ciclo de &#xa;Krebs, como parte de la respiraci&#xf3;n aer&#xf3;bica.&#xa;&#xa;La reproducci&#xf3;n de intermediarios de seis y tres &#xa;carbonos que pueden ser utilizados en otros procsos &#xa;c&#xe9;lulares. En procariotas y eucariotas, la gluc&#xf3;-&#xa;-lisis ocurre en el citosol de la c&#xe9;lula. Ciertos&#xa;vegetales, algunas de las reacciones glagol&#xed;ticas&#xa;se encuentran tambi&#xe9;n en el ciclo de Calvin,&#xa;que ocurre en los cloroplastos. La amplia &#xa;conservaci&#xf3;n de esta v&#xed;a incluye los organismos &#xa;filogen&#xe9;ticamente m&#xe1;s antiguos y por esto se&#xa;considera una de las v&#xed;as metab&#xf3;licas m&#xe1;s antiguas.&#xa;&#xa;&#xa;"/>
@@ -97,6 +101,9 @@
     </Container>
     <Component class="javax.swing.JButton" name="btnAtras">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="11" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Atras"/>
       </Properties>
       <Events>
@@ -105,6 +112,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnAdelante">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="11" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Adelante&#xa;"/>
       </Properties>
       <Events>
@@ -113,6 +123,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnMenuprincipal">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="11" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Menu principal"/>
       </Properties>
       <Events>

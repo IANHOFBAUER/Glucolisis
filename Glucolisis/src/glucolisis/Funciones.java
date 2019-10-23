@@ -40,15 +40,18 @@ public class Funciones extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("FrmFunciones"); // NOI18N
+        setResizable(false);
 
         txtFunciones.setEditable(false);
         txtFunciones.setColumns(20);
+        txtFunciones.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtFunciones.setLineWrap(true);
         txtFunciones.setRows(5);
         txtFunciones.setText("Las funciones de la glucólisis son una generación de\nmoléculas de alta energía (ATP NADH) como fuente de\nenergía célular en procesos de respiración aeróbica\n(presencia de oxigeno) y fermentación (ausencia de\noxigeno).\n\nla generación de piruvato que pasará al ciclo de \nKrebs, como parte de la respiración aeróbica.\n\nLa reproducción de intermediarios de seis y tres \ncarbonos que pueden ser utilizados en otros procsos \ncélulares. En procariotas y eucariotas, la glucó-\n-lisis ocurre en el citosol de la célula. Ciertos\nvegetales, algunas de las reacciones glagolíticas\nse encuentran también en el ciclo de Calvin,\nque ocurre en los cloroplastos. La amplia \nconservación de esta vía incluye los organismos \nfilogenéticamente más antiguos y por esto se\nconsidera una de las vías metabólicas más antiguas.\n\n\n");
         txtFunciones.setWrapStyleWord(true);
         jScrollPane2.setViewportView(txtFunciones);
 
+        btnAtras.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         btnAtras.setText("Atras");
         btnAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,6 +59,7 @@ public class Funciones extends javax.swing.JFrame {
             }
         });
 
+        btnAdelante.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         btnAdelante.setText("Adelante\n");
         btnAdelante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,6 +67,7 @@ public class Funciones extends javax.swing.JFrame {
             }
         });
 
+        btnMenuprincipal.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         btnMenuprincipal.setText("Menu principal");
         btnMenuprincipal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,19 +98,19 @@ public class Funciones extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(btnAyuda)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(74, 74, 74)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnMenuprincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(83, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblFunciones, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(229, 229, 229))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnMenuprincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -113,9 +118,9 @@ public class Funciones extends javax.swing.JFrame {
                 .addComponent(btnAyuda)
                 .addGap(5, 5, 5)
                 .addComponent(lblFunciones, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(13, 13, 13)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAtras)
                     .addComponent(btnAdelante))
@@ -146,7 +151,7 @@ public class Funciones extends javax.swing.JFrame {
     private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
         Ayuda i=new Ayuda();
 i.setVisible(true);
-dispose();
+
     }//GEN-LAST:event_btnAyudaActionPerformed
 
     /**
