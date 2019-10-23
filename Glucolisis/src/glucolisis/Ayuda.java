@@ -36,9 +36,12 @@ public class Ayuda extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("FrmAyuda"); // NOI18N
+        setResizable(false);
 
+        btnManual.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         btnManual.setText("Manual de usuario");
 
+        btnAtras.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         btnAtras.setText("Atrás");
         btnAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
