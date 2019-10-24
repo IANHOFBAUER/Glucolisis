@@ -133,18 +133,17 @@ public class Introduccion extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
-   dispose();
+        dispose();
     }//GEN-LAST:event_btnAtrasActionPerformed
 
     private void btnAdelanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdelanteActionPerformed
-     Glucolisis del = new Glucolisis();
-        del.setVisible(true);
-        dispose();
+        Glucolisis glu = new Glucolisis();
+        glu.setVisible(true);
     }//GEN-LAST:event_btnAdelanteActionPerformed
 
     private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
-        Ayuda i=new Ayuda();
-i.setVisible(true);
+        Ayuda i = new Ayuda();
+        i.setVisible(true);
 
     }//GEN-LAST:event_btnAyudaActionPerformed
 
@@ -177,10 +176,8 @@ i.setVisible(true);
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Introduccion().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Introduccion().setVisible(true);
         });
     }
 

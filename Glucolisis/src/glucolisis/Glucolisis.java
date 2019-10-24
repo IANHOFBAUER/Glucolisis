@@ -86,7 +86,7 @@ public class Glucolisis extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ejemplo glucolisis.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ejemplo_glucolisis.png"))); // NOI18N
 
         lblGlucolisis.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
         lblGlucolisis.setText("Glucólisis:Un proceso Energetico");
