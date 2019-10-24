@@ -33,6 +33,7 @@ public class Ayuda extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
         lblAyuda = new javax.swing.JLabel();
+        btnManuTec = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("FrmAyuda"); // NOI18N
@@ -40,6 +41,11 @@ public class Ayuda extends javax.swing.JFrame {
 
         btnManual.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         btnManual.setText("Manual de usuario");
+        btnManual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnManualActionPerformed(evt);
+            }
+        });
 
         btnAtras.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         btnAtras.setText("Atrás");
@@ -57,6 +63,8 @@ public class Ayuda extends javax.swing.JFrame {
         lblAyuda.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
         lblAyuda.setText("Ayuda");
 
+        btnManuTec.setText("Manual Técnico");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -69,7 +77,9 @@ public class Ayuda extends javax.swing.JFrame {
                         .addComponent(btnAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(331, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnManual, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnManual, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
+                            .addComponent(btnManuTec, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(39, 39, 39))))
@@ -87,6 +97,8 @@ public class Ayuda extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnManual, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnManuTec, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -100,6 +112,11 @@ public class Ayuda extends javax.swing.JFrame {
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
        dispose();
     }//GEN-LAST:event_btnAtrasActionPerformed
+
+    private void btnManualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManualActionPerformed
+        Procesos Manualus=new Procesos();
+        Manualus.cargarArchivo();
+    }//GEN-LAST:event_btnManualActionPerformed
 
     /**
      * @param args the command line arguments
@@ -138,6 +155,7 @@ public class Ayuda extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton btnAtras;
+    private javax.swing.JToggleButton btnManuTec;
     private javax.swing.JToggleButton btnManual;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JScrollPane jScrollPane2;
