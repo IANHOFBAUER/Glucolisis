@@ -107,8 +107,8 @@ public class Ayuda extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAtrasActionPerformed
 
     private void btnManualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManualActionPerformed
-        Procesos Manualus=new Procesos();
-        Manualus.cargarArchivo();
+        Procesos Manual=new Procesos();
+        Manual.cargarArchivo();
     }//GEN-LAST:event_btnManualActionPerformed
 
     /**
